@@ -1,0 +1,16 @@
+#Frontend
+node_modules/
+build/
+*.log
+*.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Flask specific Backend
+__pycache__/
+.venv
+config.py
+
+#IDE
+.vscode
