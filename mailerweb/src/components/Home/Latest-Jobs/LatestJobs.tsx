@@ -39,7 +39,9 @@ const LatestJobs = () => {
 
   let [array1, array2] = splitArray2(latest_jobs);
 
-  console.log("array1 = " + JSON.stringify(array1[0]));
+  console.log("array1 = " + JSON.stringify(array1));
+  console.log("array2 = " + JSON.stringify(array2));
+
 
   // console.log(Array.isArray(Jobs));
 
@@ -50,9 +52,9 @@ const LatestJobs = () => {
       navButtonsAlwaysVisible={true}
       indicators={false}
       duration={650}
-      className="w-[1300px] justify-center items-center mt-10"
+      className="w-[1000px] flex justify-center items-center mt-10"
     >
-      <div className="flex gap-5 justify-center">
+      {/* <div className="flex gap-5 justify-center">
         {array1.map((e) => {
           return (
             <div className="">
@@ -69,7 +71,16 @@ const LatestJobs = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
+      {
+        latest_jobs.map((e) => {
+          return (
+            <div className="flex flex-row justify-center">
+              <Job element={e} />
+            </div>
+          )
+        })
+      }
     </Carousel>
   );
 };
