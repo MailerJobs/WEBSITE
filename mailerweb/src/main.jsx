@@ -11,6 +11,7 @@ import {
   RouterProvider,
   // @ts-ignore
 } from "react-router-dom";
+import JobsPage from "./pages/Jobs-page.tsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
     path: "/home",
     element: <HomePage />,
   },
+  {
+    path: "/jobs",
+    element: <JobsPage />,
+  }
 ]);
 
 // @ts-ignore
